@@ -1,17 +1,22 @@
 ```html
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
-  <title>ngry Neighbor WebGL Port - by horrorphobia</title>
-  
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+
+  <title>Angry Neighbor WebGL Port - by horrorphobia</title>
+
+  <!-- ИКОНКА САЙТА -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       width: 100%;
@@ -41,6 +46,7 @@
 </head>
 
 <body>
+
   <div id="unity-container">
     <canvas id="unity-canvas"></canvas>
   </div>
@@ -55,6 +61,7 @@
       frameworkUrl: "Build/an_webgl.framework.js.unityweb",
       codeUrl: "Build/an_webgl.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
+
       companyName: "horrorphobia",
       productName: "Angry Neighbor WebGL Port",
       productVersion: "1.03",
@@ -62,6 +69,8 @@
       matchWebGLToCanvasSize: true,
     });
   </script>
+
 </body>
+
 </html>
 ```
