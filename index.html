@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -10,7 +11,7 @@
 
   <title>Angry Neighbor WebGL Port - by horrorphobia</title>
 
-  <!-- ИКОНКА САЙТА -->
+  <!-- Иконка сайта -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
@@ -18,28 +19,42 @@
     body {
       margin: 0;
       padding: 0;
+
       width: 100%;
       height: 100%;
-      overflow: hidden;
-      background: #2b2b2b;
-    }
 
-    body {
+      overflow: hidden;
+
+      background: #1F1F20;
+
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     #unity-container {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     #unity-canvas {
-      width: 100%;
-      height: 100%;
+      background: #1F1F20;
+
+      aspect-ratio: 16 / 9;
+
+      width: 100vw;
+      height: auto;
+
+      max-width: 100vw;
+      max-height: 100vh;
+
       display: block;
-      background: #2b2b2b;
+
+      touch-action: none;
     }
   </style>
 </head>
@@ -53,12 +68,13 @@
   <script src="Build/an_webgl.loader.js"></script>
 
   <script>
-    var canvas = document.querySelector("#unity-canvas");
+    const canvas = document.querySelector("#unity-canvas");
 
     createUnityInstance(canvas, {
       dataUrl: "Build/an_webgl.data.unityweb",
       frameworkUrl: "Build/an_webgl.framework.js.unityweb",
       codeUrl: "Build/an_webgl.wasm.unityweb",
+
       streamingAssetsUrl: "StreamingAssets",
 
       companyName: "horrorphobia",
